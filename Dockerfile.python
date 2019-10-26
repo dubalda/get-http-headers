@@ -7,4 +7,6 @@ WORKDIR /usr/src/app
 
 COPY python/. .
 
+EXPOSE 5002
+
 CMD [ "python", "./webserver.py" ]
