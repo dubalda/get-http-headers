@@ -1,0 +1,15 @@
+version: '3.4'
+
+networks:
+  header:
+  nginx:
+    external: true
+
+services:
+  header:
+    image: laptevss/get-http-headers:python
+    ports:
+      - "5002:5002"
+    networks:
+      - header
+      - nginx
